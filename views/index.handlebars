@@ -1,0 +1,31 @@
+<section class="py-2">
+    <div class="row">
+        <div class="col-md-6 text-center">
+            <h1 class="display-3 mt-3 pt-5">
+                Ready To Go
+            </h1>
+            <p class="lead">Your best bet against expensive travelling</p>
+            <form action="/pay" method="POST">
+                <script 
+                    src="https://checkout.stripe.com/checkout.js" 
+                    class="stripe-button" 
+                    data-key="{{stripePublishableKey}}" 
+                    data-amount="50000"
+                    data-name="Ready to go" 
+                    data-description="Travel anywhere by readytogo" 
+                    data-image="/img/marketplace.png"
+                    data-currency="inr"
+                    data-locale="auto">
+                </script>
+                <script>
+                    // Hide default stripe button
+                    document.getElementsByClassName('stripe-button-el')[0].style.display = 'none';
+                </script>
+                <button type="submit" class="btn btn-outline-dark text-white btn-lg">Pay 500 RS </button>
+            </form>
+            </div>
+            <div class="col-md-6 py-5">
+                <img src="/img/logo.png" alt="" class="img-fluid">
+            </div>
+            </div>
+            </section>
